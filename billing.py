@@ -39,7 +39,6 @@ class API:
         res = yield self.agent.request(method, url, headers, None)
         warnings.simplefilter('ignore', category=DeprecationWarning)
         data = yield readBody(res)
-        print(data)
         return json.loads(data)
 
     @defer.inlineCallbacks
